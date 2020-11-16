@@ -17,12 +17,7 @@
 		require_once 'functions-handler.php';
 
 
-		/*if(emptyInputSignup($username, $firstName, $lastName, $email, $emailConfirm, $password, $passwordConfirm)!==false){
-			//if anything besides false, then throw an error
-			header("location: ../signup.php?error=emptyInput");
-			//stops the script
-			exit();
-		}*/
+	
 		if(invalidUserID($username)!==false){
 			//if anything besides false, then throw an error
 			header("location: ../signup.php?error=invalidUserID");

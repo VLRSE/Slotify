@@ -1,18 +1,6 @@
 <?php
 
 
-/*function emptyInputSignup($username, $firstName, $lastName, $email, $emailConfirm, $password, $passwordConfirm){
-	$result; 
-
-	if (empty($username) || empty($firstName) || empty($lastName) || empty($email) || empty($emailConfirm) || empty($password) || empty($passwordConfirm) ) {
-		$result = true;
-	}
-	else{
-		$result = false;
-	}
-
-	return $result;
-}*/
 
 function invalidUserID($username){
 	$result; 
@@ -136,6 +124,7 @@ function userIdExists($conn, $username, $email){
 
 	//Fetch data as an associative array
 	if ($row = mysqli_fetch_assoc($resultData)) {
+		echo "<p>$row</p>";
 		return $row;
 	}
 	else{
@@ -147,6 +136,7 @@ function userIdExists($conn, $username, $email){
 	mysqli_stmt_close($stmt);
 
 }
+
 
 function createUser($conn, $username, $firstName, $lastName, $email, $password){
 
