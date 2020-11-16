@@ -1,0 +1,91 @@
+<html>
+<head>
+	<!--PROCEDURAL CODE -->
+
+	<title>Welcome to Slotify!</title>
+	<!--Bootstrap-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<!--reCaptcha-->
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+
+</head>
+<body>
+
+	<div id="inputContainer" class="container d-block ">
+		<!--Logo-->
+		<div class="container d-flex justify-content-center p-2 " >
+			<img src=" assets/images/logo.png ">
+		</div>
+		<div class=" row  ">
+			<div class="col-12 d-flex justify-content-center">
+				<!--Registration-->
+				<form id="registerForm" action="includes/signup-handler.php" method="POST">
+					<h2>Create your free account</h2>
+					<!--Username-->
+					<label class="pt-2" for="username">Username</label>
+					<p>						
+						<input id="username" class="form-control"  name="username" type="text" placeholder="e.g. john_doe" required>
+					</p>
+					
+					<label for="firstName">First name</label>
+					<p>						
+						<input id="firstName" class="form-control" name="firstName" type="text" placeholder="e.g. John"  required>
+					</p>
+					<!--Lastname-->
+					<label for="lastName">Last name</label>
+					<p>						
+						<input id="lastName" class="form-control" name="lastName" type="text" placeholder="e.g. Doe" required>
+					</p>
+					<!--Email-->
+					<label for="email">Email</label>
+					<p>						
+						<input id="email" class="form-control"  name="email" type="email" placeholder="e.g. johnDoe@gmail.com" required>
+					</p>
+					<!--Email Confirmation-->
+					<label for="email2">Confirm email</label>
+					<p>
+						<input id="email2" class="form-control" name="emailConfirm" type="email" placeholder="e.g. johnDoe@gmail.com" required>
+					</p>
+					<!--Password-->
+					<label for="password">Password</label>
+					<p>
+						
+						<input id="password" class="form-control" name="password" type="password" placeholder="Password at least 8 characters" required>
+					</p>
+					<!--Password confirmation-->
+					<label for="password2">Confirm password</label>
+					<p>	
+						<input id="password2" class="form-control" name="passwordConfirm" type="password" placeholder="Retype password" required>
+					</p>
+						<!--Sign Up button-->
+					<div class="container-fluid p-2">
+						<button class="btn btn-success btn-lg align-self-center rounded-pill " type="submit" name="registerButton">SIGN UP</button>
+					</div>	
+				   </form>
+				</div>					
+			</div>
+		</div>
+			<?php 
+				if(isset($_GET["error"])){
+					if($_GET["error"] == "emptyInput"){
+						echo "<p> Fill in all fields</p>";
+					}
+					elseif ($_GET["error"] == "invalidUserID") {
+						echo "<p>Enter a proper username </p>";
+					}
+				}
+
+
+			?>
+				
+
+	</div>
+
+	<!--Bootstrap-->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>
