@@ -2,21 +2,53 @@
 <head>
 	<title>Welcome to Slotify!</title>
 
+	<!--Customized CSS-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<!--Bootstrap-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <body>
+	
+
+
 	<div id="inputContainer" class="container d-block ">
 		<!--Logo-->
-		<div class="container d-flex justify-content-center p-2 " >
+		<div class="container d-flex justify-content-center border-bottom" >
 			<img src=" assets/images/logo.png ">
 		</div>
+
+			<!--Divider-->
+		<div class=" col-xs-5 d-flex justify-content-center ">
+			<hr class="divider">
+				
+			</hr>
+		</div>
+		
 		<div class=" row  ">
+
 				<!--Login Form-->			
 			<div class="col-12  p-5 d-flex justify-content-center ">
-				<form id="loginForm" action="login.php" method="POST">		
+				
+				
+
+				<form id="loginForm" action="includes/login-handler.php" method="POST">		
 					<h2>Login to your account</h2>
+					<!--ERROR MESSAGE-->
+				<div  class = "container d-flex justify-content-center text-danger pt-2">
+						<?php 
+
+						if(isset($_GET["error"])){
+							if($_GET["error"] == "invalidLoginDetails"){
+								echo "<p>Username does not exist</p>";
+							}
+							elseif ($_GET["error"] == "wrongPassword") {
+								echo "<p>Wrong password</p>";
+							}
+						}
+					?>
+				</div>
+					
 					<!--Username-->
 					<label for="loginUsername">Username</label>
 					<p>		
