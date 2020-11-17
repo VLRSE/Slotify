@@ -18,9 +18,9 @@
 				<form id="loginForm" action="login.php" method="POST">		
 					<h2>Login to your account</h2>
 					<!--Username-->
-					<label for="loginUsername">Username</label>
+					<label class="pt-2" for="loginUsername">Username or E-mail</label>
 					<p>		
-						<input id="loginUsername" class="form-control" name="loginUsername" type="text" placeholder="e.g. bartSimpson" required>
+						<input id="loginUsername" class="form-control" name="loginUsername" type="text" placeholder="e.g. bartSimpson / bart@gmail.com" required>
 					</p>
 					<!--Password-->
 						<label for="loginPassword">Password</label>
