@@ -164,6 +164,7 @@ function createUser($conn, $username, $firstName, $lastName, $email, $password){
 	exit();
 }
 
+<<<<<<< HEAD
 function loginUser($conn, $loginUsername, $password){
 
  	$usernameExists = userIdExists($conn, $username, $loginUsername);
@@ -189,5 +190,32 @@ function loginUser($conn, $loginUsername, $password){
  		header("location ..//index.php");
  		exit();
  	}
+=======
+function loginUser($conn, $username, $password){
+	$userIdExists = userIdExists($conn, $username, $username);
+
+	if($userIdExists === false){
+		header("location: ../login.php?error=invalidLoginDetails");
+		exit();
+	}
+
+
+	$passwordHashed = $userIdExists["usersPassword"];
+	$verifyPassword = password_verify($password, $passwordHashed);
+
+	if ($verifyPassword === false) {
+		header("location: ../login.php?error=wrongPassword");
+		exit();
+	}
+	else if ($verifyPassword === true) {
+		//start a new session
+		session_start();
+		$_SESSION["userID"] =  $userIdExists["usersId"];
+		$_SESSION["username"] =  $userIdExists["username"];
+
+		header("location: ../index.php");
+		exit();
+	}
+>>>>>>> updated
 
 }

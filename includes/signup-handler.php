@@ -72,8 +72,6 @@
 		echo "success registration";
 
 		createUser($conn, $username, $firstName, $lastName, $email, $password);
-
-
 	}
 	else{
 		//redirect user to the signup page 
