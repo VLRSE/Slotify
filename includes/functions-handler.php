@@ -164,6 +164,33 @@ function createUser($conn, $username, $firstName, $lastName, $email, $password){
 	exit();
 }
 
+<<<<<<< HEAD
+function loginUser($conn, $loginUsername, $password){
+
+ 	$usernameExists = userIdExists($conn, $username, $loginUsername);
+
+ 	if (usernameExists === false) {
+ 		header("location ../login.php?error=wrongLoginDetails");
+ 	}
+ 	//get hashed password from the database
+ 	$hashedPassword = $usernameExists["usersPassword"];
+ 	//verify if the entered password matches that of in the database
+ 	$checkPassword = password_verify($password, $hashedPassword);
+
+ 	if($checkPassword === false){
+ 		header("location ../login.php?error=wrongPassword");
+ 		exit();
+ 	}
+ 	else if ($checkPassword === true) {
+ 		session_start();
+ 		$_SESSION["usersId"] = $usernameExists["usersId"];
+ 		$_SESSION["username"] = $usernameExists["username"];
+
+ 		//redirect user to the homepage
+ 		header("location ..//index.php");
+ 		exit();
+ 	}
+=======
 function loginUser($conn, $username, $password){
 	$userIdExists = userIdExists($conn, $username, $username);
 
@@ -189,5 +216,6 @@ function loginUser($conn, $username, $password){
 		header("location: ../index.php");
 		exit();
 	}
+>>>>>>> updated
 
 }

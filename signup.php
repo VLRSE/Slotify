@@ -39,6 +39,11 @@
 					<div  class = " errorMessage container d-flex justify-content-center text-danger pt-2">
 						<?php 
 
+<<<<<<< HEAD
+			?>
+				
+			</div>
+=======
 						if(isset($_GET["error"])){
 							if($_GET["error"] == "emptyInput"){
 								echo "<p> Fill in all fields</p>";
@@ -70,6 +75,7 @@
 						}
 					?>
 				</div>
+>>>>>>> updated
 					<!--Username-->
 					<label class="pt-2" for="username">Username</label>
 					<p>						

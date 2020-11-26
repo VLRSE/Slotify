@@ -41,6 +41,7 @@ function getInputValue($name){
 						<h3>Member Login</h3>
 					</div>
 					
+
 					<!--ERROR MESSAGE-->
 					<div  class = " errorMessage container d-flex justify-content-center text-danger pt-2">
 						<?php 
@@ -54,6 +55,7 @@ function getInputValue($name){
 							}
 											
 						?>
+
 				</div>
 					<!--Username-->
 					<label class="pt-2" for="loginUsername">Username</label>
@@ -76,6 +78,21 @@ function getInputValue($name){
 						</p>						
 					</div>					
 				</div>
+
+				<!--Login Button-->
+				<div id= "loginButton"class=" colouredButton col-md-12 justify-content-center pt-2">
+					<button   class=" btn btn-lg btn-block btn-success rounded-pill" type="submit" name="loginButton">LOG IN</button>
+				</div>					
+			</form>			
+		</div>
+		<!--SignUp Section-->
+		<div id="sign-up-button-link-content" class="container pt-3 ">
+			<div class="row justify-content-center border-top">
+				<div id="hasAccountText" class="col-12 pt-3" style="text-align: center;">
+					<div class="col-12 ">
+						<span>Don´t have an account yet?</span>
+
+					</div>
 					
 						<!--Sign Up button-->
 					<div id= "loginButton" class="colouredButton col-md-12 justify-content-center pt-2">
