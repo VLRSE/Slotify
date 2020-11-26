@@ -33,17 +33,13 @@
 				<!--Registration Form -->
 				<form id="registerForm" action="includes/signup-handler.php" method="POST">
 					<div style="text-align: center;">
-						<h3>Create Your Free Account</h3>
+						<h3>Member Login</h3>
 					</div>
+					
 					<!--ERROR MESSAGE-->
 					<div  class = "container d-flex justify-content-center text-danger pt-2">
 						<?php 
 
-<<<<<<< HEAD
-			?>
-				
-			</div>
-=======
 						if(isset($_GET["error"])){
 							if($_GET["error"] == "emptyInput"){
 								echo "<p> Fill in all fields</p>";
@@ -75,46 +71,22 @@
 						}
 					?>
 				</div>
->>>>>>> updated
 					<!--Username-->
 					<label class="pt-2" for="username">Username</label>
 					<p>						
 						<input id="username" class="form-control"  name="username" type="text" placeholder="e.g. john_doe" required>
-					</p>
+					</p>					
 					
-					<label for="firstName">First name</label>
-					<p>						
-						<input id="firstName" class="form-control" name="firstName" type="text" placeholder="e.g. John"  required>
-					</p>
-					<!--Lastname-->
-					<label for="lastName">Last name</label>
-					<p>						
-						<input id="lastName" class="form-control" name="lastName" type="text" placeholder="e.g. Doe" required>
-					</p>
-					<!--Email-->
-					<label for="email">Email</label>
-					<p>						
-						<input id="email" class="form-control"  name="email" type="email" placeholder="e.g. johnDoe@gmail.com" required>
-					</p>
-					<!--Email Confirmation-->
-					<label for="email2">Confirm email</label>
-					<p>
-						<input id="email2" class="form-control" name="emailConfirm" type="email" placeholder="e.g. johnDoe@gmail.com" required>
-					</p>
 					<!--Password-->
 					<label for="password">Password</label>
 					<p>
 						
 						<input id="password" class="form-control" name="password" type="password" placeholder="Password at least 8 characters" required>
 					</p>
-					<!--Password confirmation-->
-					<label for="password2">Confirm password</label>
-					<p>	
-						<input id="password2" class="form-control" name="passwordConfirm" type="password" placeholder="Retype password" required>
-					</p>
+					
 						<!--Sign Up button-->
 					<div id= "signUpButton" class="colouredButton col-md-12 justify-content-center pt-2">
-						<button class="btn btn-success btn-lg btn-block rounded-pill " type="submit" name="registerButton">SIGN UP</button>
+						<button class="btn btn-success btn-lg btn-block rounded-pill " type="submit" name="registerButton">LOG IN</button>
 					</div>	
 				   </form>
 				</div>		
@@ -122,12 +94,15 @@
 			<div id="sign-up-button-link-content" class=" buttonLinkContent pt-3 ">
 					<div id="hasAccountText" class="col-12 pt-3" style="text-align: center;">
 						<div class="col-12">
-							<span>Have already an account?</span>
+							<span>Don´t have an account yet?</span>
 						</div>
 						
 					</div>	
-					<div id="loginButtonLink" class=" buttonLink justify-content-center ">						
-						<a  href="login.php" role ="button"  ><button class="btn btn-outline-secondary rounded-pill btn-lg btn-block">LOG IN</button></a>
+					<div id="loginButtonLink" class=" buttonLink justify-content-center ">
+						<div class="">
+								<a  href="login.php" role ="button"  ><button class="btn btn-outline-secondary rounded-pill btn-lg btn-block">REGISTER</button></a>
+						</div>
+					
 					</div>				
 				
 				

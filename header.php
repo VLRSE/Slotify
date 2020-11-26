@@ -18,9 +18,9 @@
 			<!-- Expand Navbar-->
 			<nav class="navbar navbar-dark bg-dark fixed-top   navbar-expand-lg ">
 				<div class="container pb-2  " href="#">
-	
+
 					<!--Logo on the left-side-->
-					<img style="height: 40px;width: 40px;" src=" assets/images/logo.png"></a>	
+					<img style="height: 40px;width: 40px;" src=" assets/images/logo.png">
 					<!--Collapsed Menu bar -->		
 					<button class="  navbar-toggler   navbar-dark  bg-dark border-dark " type="button" data-toggle ="collapse" data-target="#navbar-external-content"  		aria-controls="navbar-external-content" aria-label ="Toggle Navigation">
 						<span class=" navbar-toggler-icon "></span>			
@@ -42,12 +42,12 @@
 							</a>
 						</li>
 						<li class="nav-item pl-3 pr-3">
-							<a class ="nav-link nav-text gray-border-bottom  pl-3 pr-3 " href="#portfolio">Sign up
+							<a class ="nav-link nav-text gray-border-bottom  pl-3 pr-3 " href="signup.php">Sign up
 							</a>
 							
 						</li>
 						<li class="nav-item pl-3 pr-3">
-							<a class ="nav-link nav-text gray-border-bottom pl-3 pr-3 " href="#contact">Login
+							<a class ="nav-link nav-text gray-border-bottom pl-3 pr-3 " href="login.php">Login
 							</a>
 						</li>
 					</ul>
@@ -56,9 +56,3 @@
 		</div>
 
 
-
-	<!--Bootstrap CDN-->
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-</body>
-</html>

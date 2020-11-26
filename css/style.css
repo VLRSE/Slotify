@@ -1,32 +1,138 @@
 body, html{
-	background-color: #2c3e50;
+
     color: #ffff;
     text-align: center;
    	font-size: 100%;
   	font-family: 'Merriweather', serif;
 	line-height: 1px;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+div{
+	display: block;
+}
+
+.overlay{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(42,62,80,0.5);
+	z-index: 2;
+	cursor: pointer;
 }
 
 
+.main-content{
+	padding: 60px 0px;
+	position: relative;
+	margin-top: 10vh;
+
+}
 
 .logo{
 	position: relative;
 	left:1.6666rem;
 }
-.loader{
-	width: 100%;
-	height: 100%;
-	background-color: #ffff;
-	position: fixed;
-	top: 0px;
-	left:0px;
-	z-index: 1000;
+
+#loginContainer{
+	padding: 20px 20%;
 }
-.loader .inner{
-	width: 100%;
-	height: 100%;
-	background: url("../images/preloaderGIF.gif") center center no-repeat;
+
+form{
+  width: 450px;
 }
+
+.content{
+	padding: 0px 25%;
+}
+
+.row{
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+
+.content label{
+	font-weight: 500;
+    font-size: 14px;
+} 
+#navbarLogo a img{
+	height: 10vh;
+}
+
+#hasAccountText span,
+.colouredButton button, 
+.buttonLink button, 
+.colouredButton button,
+.reset-password u a{
+	font-size: 14px;
+  font-weight: bold; 
+   letter-spacing: 1px;
+   border-width: 2px;
+}
+.reset-password u a{
+	color: #565656;
+	letter-spacing: 0px;
+}
+#colouredButton button{
+    border: 1px solid #07d159;
+    color: #fff;
+    padding-left: 0;
+    padding-right: 0;
+   
+}
+#hasAccountText {
+	font-size: 16px;
+	color: #424242;
+	margin: 0px auto;
+}
+.buttonLinkContent{
+  margin: auto;
+   width: 450px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 1px solid #9999 ;
+}
+.buttonLink{
+  padding-top: 16px;
+  max-width: 450px;
+
+}
+
+.buttonLink a{
+	text-decoration: none;
+}
+
+#innerContainer{
+	  max-width: 450px;
+    text-align: center;
+    margin: auto;
+
+}
+
+.loginButton button{
+	background-color: #28a745;
+    font-size: 12px;
+    font-style: 
+    border: 1px solid #07d159;
+    color: #fff;
+    display: block;
+}
+
+
+.abcRioButtonBlue {  
+    margin: auto;
+}
+
 .navbar-container { 
   background-color: #2c3e50;
   position: absolute;
@@ -36,29 +142,32 @@ body, html{
   z-index: 50;
 }
 
-
+ul{
+	list-style: none;
+}
 .nav-text{	
 	color:  white;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 14px;
 	font-weight: 400;
 	letter-spacing: 2px;
+	opacity: 0.7;
 }
 
 li a.active {   
-  border-bottom: 1px solid #F9A825;
+	background-color: #56626e;
   padding-right: 5px;
    transform: scale(1);
+   border-radius: 20px;
+   opacity: 1;
 }
 
 li a:hover {
 	color:#F9A825;
 	opacity: 1;
 	text-decoration: none;
-	border: 2px  solid #616161 ;
 	border-collapse: all;
-	opacity: 0.9;
-	background-color: #e67e22;
+	opacity: 1;
 	color: #ffff;
 }
 
@@ -70,8 +179,42 @@ li a:hover {
 	overflow: hidden;
 
 }
- 
-hr.divider{
 
-	border-top: 3px solid blue;
+#my-signin2{
+	border-radius: 20px;
+
 }
+ #customBtn {
+      display: inline-block;
+      background: white;
+      color: #444;
+      width: 190px;
+      border-radius: 5px;
+      border: thin solid #888;
+      box-shadow: 1px 1px 1px grey;
+      white-space: nowrap;
+    }
+    #customBtn:hover {
+      cursor: pointer;
+    }
+    span.label {
+      font-family: serif;
+      font-weight: normal;
+    }
+    span.icon {
+      background: url('../assets/web/vector/btn_google_dark_normal_ios.png') transparent 5px 50% no-repeat;
+      display: inline-block;
+      vertical-align: middle;
+      width: 42px;
+      height: 42px;
+    }
+    span.buttonText {
+      display: inline-block;
+      vertical-align: middle;
+      padding-left: 42px;
+      padding-right: 42px;
+      font-size: 14px;
+      font-weight: bold;
+      /* Use the Roboto font that is loaded in the <head> */
+      font-family: 'Roboto', sans-serif;
+    }
