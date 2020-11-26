@@ -1,0 +1,264 @@
+body, html{
+	background-color: #121212;
+    color: #ffff;
+    text-align: center;
+   	font-size: 100%;
+  	font-family: 'Merriweather', serif;
+	line-height: 1px;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	-webkit-font-smoothing: antialiased;
+	font-size: 14px;
+}
+
+#main{
+	width: auto;
+	position: relative;
+	height: 100%;
+}
+
+/*Page grid container*/
+.grid-container{
+	width: 100%;
+	position: relative;
+	height: 100%;
+	display: grid;
+	grid-template-rows: 1fr auto;
+	grid-template-columns: auto 1fr	;
+	grid-template-areas: 
+	"navbar mainContent mainContent"
+	"nowPlayingContainer nowPlayingContainer nowPlayingContainer";
+}
+
+
+.nav{
+	padding-right: 10px;
+}
+/*Logo*/
+.logo{
+	position: relative;	
+	margin-bottom:1.6666rem;
+}
+
+.navbar, 
+#nowPlayingBar,
+#nowPlayingBarCenter,
+.playerControls .buttons,
+#nowPlayingBarCenter .playbackBar,
+#nowPlayingBarLeft .trackInfo, 
+#nowPlayingBarLeft .saveToLibraryBtn{
+	display: flex;
+}
+
+
+/*Navbar Container*/
+.navbar { 
+	grid-area: navbar;	
+	background-color: #000;
+    -webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	top: 0;
+	left: 0;
+	padding:0;
+	z-index: 3;
+}
+
+.nav-text{	
+	color:  white;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	opacity: 0.7;
+}
+#main .nav-text{	
+	align-items: inherit;
+}
+ul{
+	list-style: none;
+	text-decoration-style: none;
+	padding:1.6666rem;
+
+}
+a{
+	vertical-align: baseline;
+	margin: 0;
+    padding: 0;
+    border: 0;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+li a.active {   
+	background-color: #56626e;
+   border-radius: 10px;
+   opacity: 1;
+}
+
+li a:hover {
+	color:#F9A825;
+	opacity: 1;
+	text-decoration: none;
+	border-collapse: all;
+	opacity: 1;
+	color: #ffff;
+}
+
+/*Main Page on the right side*/
+#mainContainer{
+	grid-area: mainContent;
+	background-color: #212121;
+}
+
+/*Footer-- Now Playing Bar Container*/
+#nowPlayingContainer{
+	grid-column: 1 / span 2;
+	background-color: #383838;
+	min-width: 768px;	
+}
+/*Now Playing Bar*/
+#nowPlayingBar{
+	height: 90px;
+	padding: 16px;
+	box-sizing: border-box;
+	color: #ffff;
+
+}
+
+/*Now Playing Left and Right*/
+#nowPlayingBarLeft, 
+#nowPlayingBarRight{
+	width: 30%;
+	min-width: 180px;
+
+}
+
+/*Now Playing Center*/
+#nowPlayingBarCenter{
+	flex-direction: column;
+	width: 40%;
+	max-width: 722px;
+	align-items: center;
+}
+
+/*Now Playing Bar Content*/
+#nowPlayingBar .content{
+	width: 100%;
+	height:57px;
+
+}
+/*Now Playing Bar Play Player Controls*/
+.playerControls .buttons{
+	width: 50%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+/*Now Playing Bar Play Player Controls Buttons*/
+.controlButton{
+	background-color: transparent;
+	border:none;
+    vertical-align: middle;   
+}
+
+/*Now Playing Bar Play Player Control Buttons Image*/
+.controlButton img{
+	vertical-align: middle;
+	height: 18px;
+    width: 18px;
+}
+
+/*Now Playing Bar Play Player Control Center Buttons -- for Play and Pause buttons*/
+#nowPlayingBarCenter .controlButton.centerButton img{
+	height: 32px;
+	width: 32px;
+}
+
+#nowPlayingBarCenter .playbackBar{
+	margin-top: 5px;
+	flex-direction: row;
+}
+
+.playbackBar .progressTime,
+.playbackBar .progressBar{
+
+	color: #a0a0a0;
+	font-size: 11px;
+	min-width: 40px;
+	text-align: center;
+}
+
+.progressBar{
+
+	align-self: center; 
+	width: 100%;	
+}
+
+.progressBarBg{
+	background-color: #383838;
+}
+
+.progressBar .progress{
+	background-color: #a0a0a0;
+	height: 4px;
+	border-radius: 2px;
+	width: 0;
+}
+
+.playbackBar .progressBar{
+	margin-top: 3px;
+}
+
+#nowPlayingBar .albumImage{
+	height:100%; 
+	width: 50px; 
+	max-width: 57px; 
+	margin-right: 15px; 
+	float:left; 	
+	background-size: cover;
+}
+
+#nowPlayingBarLeft .trackInfo, 
+#nowPlayingBarLeft .saveToLibraryBtn{
+	margin: 10px 24px 0 0;
+	flex-direction: column;
+	vertical-align: middle;
+	line-height: 1.2rem;
+
+}
+
+#nowPlayingBarLeft  .trackArtist{
+	font-size: 0.88rem;
+	color: #a0a0a0;
+	font-weight: 500;
+}
+
+.saveToLibraryBt{
+	justify-content: center;
+}
+
+
+#nowPlayingBarLeft .saveToLibraryBtn img{
+	color: #a0a0a0;
+}
+
+.volumeBar{
+	margin: 10px 0px 10px 40%;
+	justify-content: center;
+}
+
+.volumeBar .progressBar{
+	width: 50%;
+}
+
+.volumeBar .progress{
+	background-color: #03d259;
+	width: 50%;
+} 
+
+footer{
+	width: 100%;
+	z-index: 10;
+	align-self: start;
+}
