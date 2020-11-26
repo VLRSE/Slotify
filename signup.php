@@ -36,7 +36,7 @@
 						<h3>Create Your Free Account</h3>
 					</div>
 					<!--ERROR MESSAGE-->
-					<div  class = "container d-flex justify-content-center text-danger pt-2">
+					<div  class = " errorMessage container d-flex justify-content-center text-danger pt-2">
 						<?php 
 
 						if(isset($_GET["error"])){
@@ -56,7 +56,7 @@
 								echo "<p>Retype email correctly</p>";
 							}
 							elseif ($_GET["error"] == "invalidPassword") {
-								echo "<p>Enter a password with Letter in Uppercase and lowercase, and special characters</p>";
+								echo "<p>Enter a password with letters in uppercase and lowercase, and special characters</p>";
 							}
 							elseif ($_GET["error"] == "passwordsDoNotMatch") {
 								echo "<p>Retype password correctly</p>";
