@@ -39,43 +39,37 @@
 					<div  class = " errorMessage container d-flex justify-content-center text-danger pt-2">
 						<?php 
 
-<<<<<<< HEAD
-			?>
-				
-			</div>
-=======
-						if(isset($_GET["error"])){
-							if($_GET["error"] == "emptyInput"){
-								echo "<p> Fill in all fields</p>";
+							if(isset($_GET["error"])){
+								if($_GET["error"] == "emptyInput"){
+									echo "<p> Fill in all fields</p>";
+								}
+								elseif ($_GET["error"] == "invalidUserID") {
+									echo "<p>Invalid username! Enter atleast 5 characters</p>";
+								}
+								elseif ($_GET["error"] == "invalidFirstName") {
+									echo "<p>Enter letters only </p>";
+								}
+								elseif ($_GET["error"] == "invalidLastName") {
+									echo "<p>Enter letters only </p>";
+								}
+								elseif ($_GET["error"] == "emailsDoNotMatch") {
+									echo "<p>Retype email correctly</p>";
+								}
+								elseif ($_GET["error"] == "invalidPassword") {
+									echo "<p>Enter a password with letters in uppercase and lowercase, and special characters</p>";
+								}
+								elseif ($_GET["error"] == "passwordsDoNotMatch") {
+									echo "<p>Retype password correctly</p>";
+								}
+								elseif ($_GET["error"] == "usernameTaken") {
+									echo "<p >Either username or email is already taken, please login</p>";
+								}
+								elseif ($_GET["error"] == "none") {
+									echo "<h5 class='text-success'>You have successfully signed up!</h5>";
+								}
 							}
-							elseif ($_GET["error"] == "invalidUserID") {
-								echo "<p>Invalid username! Enter atleast 5 characters</p>";
-							}
-							elseif ($_GET["error"] == "invalidFirstName") {
-								echo "<p>Enter letters only </p>";
-							}
-							elseif ($_GET["error"] == "invalidLastName") {
-								echo "<p>Enter letters only </p>";
-							}
-							elseif ($_GET["error"] == "emailsDoNotMatch") {
-								echo "<p>Retype email correctly</p>";
-							}
-							elseif ($_GET["error"] == "invalidPassword") {
-								echo "<p>Enter a password with letters in uppercase and lowercase, and special characters</p>";
-							}
-							elseif ($_GET["error"] == "passwordsDoNotMatch") {
-								echo "<p>Retype password correctly</p>";
-							}
-							elseif ($_GET["error"] == "usernameTaken") {
-								echo "<p >Either username or email is already taken, please login</p>";
-							}
-							elseif ($_GET["error"] == "none") {
-								echo "<h5 class='text-success'>You have successfully signed up!</h5>";
-							}
-						}
-					?>
-				</div>
->>>>>>> updated
+						?>
+					</div>
 					<!--Username-->
 					<label class="pt-2" for="username">Username</label>
 					<p>						
