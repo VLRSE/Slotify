@@ -37,7 +37,7 @@
 						<div class="innerNavItems" >
 										
 						<li class="nav-item">
-							<a class ="nav-link nav-text active" href="#slides"><i class="material-icons" style="font-size:24px; padding-right: 4px;">home</i>
+							<a class ="nav-link nav-text active" href="#slides"><img src="assets/images/icons/home-white.png" style="height: 24px; width: 24px;"> 
 							<div class="innerNavText">
 								Start
 							</div>	
@@ -51,7 +51,8 @@
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class ="nav-link nav-text gray-border-bottom pl-3 pr-3" href="#skills"><i class="material-icons" style="font-size:24px; padding-right: 4px;">bar_chart</i>
+							<a class ="nav-link nav-text gray-border-bottom pl-3 pr-3" href="#skills">
+								<img src="assets/images/icons/lib-white.png" style="height: 24px; width: 24px;"> 
 
 								<div class="innerNavText">
 									Library	
@@ -76,13 +77,48 @@
 
 			<!--Main Page-->
 			<div id="mainContainer" class="container-fluid">
+				<!--Top Navbar-->
+				<div class="topNavbar container-fluid ">
+					<!--Top Left Arrow Buttons-->
+					<div class=" container ">						<!--Back Button-->	
+						<button class="controlButton" >
+							<span> <img src="assets/images/icons/back.png" style="height: 32px; width: 32px;" >
+							</span>
+						</button> 
+							
+						
+						<!--Forward Button-->
+													
+					</div>
+				</div>
+				<!--Music List Page-->
 				<div class="topContainer">
 					<div class="row">
-						<div class="col-12">
+						<div class="col-12 col-sm-3">
 							
 						</div>
 						
 					</div>
+
+					<div class="row">
+						<div class="col-12 col-sm-3">
+							
+						</div>
+						
+					</div>
+					<div class="row">
+						<div class="col-12 col-sm-3">
+							
+						</div>
+						
+					</div>
+					<div class="row">
+						<div class="col-12 col-sm-3">
+							
+						</div>
+						
+					</div>
+
 				</div>
 			</div>
 

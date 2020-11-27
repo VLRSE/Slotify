@@ -143,7 +143,20 @@ li a:hover {
 	grid-area: mainContent;
 	background-color: #212121;
 }
+/*Top Navbar*/
+#mainContainer .topNavbar{
+	padding: 0;
+	margin: 0;
 
+}
+.arrowButtons{
+
+}
+
+#mainContainer .nav-item li a.active {
+	
+	opacity: 1;
+}
 /*Footer-- Now Playing Bar Container*/
 #nowPlayingContainer{
 	grid-column: 1 / span 2;
