@@ -40,6 +40,7 @@ body, html{
 .logo{
 	position: relative;	
 	margin-bottom:1.6666rem;
+	margin-top: 1.6666rem;
 }
 
 .navbar, 
@@ -54,8 +55,9 @@ body, html{
 
 
 /*Navbar Container*/
-.navbar { 
+#main .navbar {
 	grid-area: navbar;	
+	width: 232px;
 	background-color: #000;
     -webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
@@ -63,8 +65,19 @@ body, html{
 	left: 0;
 	padding:0;
 	z-index: 3;
+	align-items: baseline;
+}
+ .container.navBarTopContainer{
+ 	padding-top: 36px;
+ 	padding: 0;
+ }
+.navbar .nav-item{
+	height: 50px;
 }
 
+#main .nav-item .nav-link:hover{
+	opacity: 1;
+}
 
 #main .nav-text{	
 	align-items: inherit;
@@ -76,8 +89,9 @@ body, html{
 	letter-spacing: 1px;
 	opacity: 0.7;
 	-ms-flex-direction:column;
-
+	    margin: auto;
 }
+
 .nav-link{
 	display: flex;
 	flex-direction: row;
@@ -85,6 +99,15 @@ body, html{
  .navbar .nav-link {
 
  } 
+.navbar .innerNavText{
+	margin-top: 5px;
+	padding-left: 10px;
+}
+
+.navbar .navbarItems{
+	width: 100%;
+    padding: 10px;
+}
 
 ul{
 	list-style: none;

@@ -24,32 +24,43 @@
 		<div class="grid-container ">		
 			<!--Navbar-->
 			<div class="navbar">
-				<div class="container">
+				<div class="navBarTopContainer container">
+					<!--Navbar Items-->	
 					<nav class="navbarItems">
 						<div class=" logo " href="#">
 							<!--Logo on the left-side-->
-							<a href="includes/index.php" style="font-size: 36px; padding: 5px;">
+							<a href="index.php" style="font-size: 36px; padding: 5px;">
 								<img style="height: 506x;width: 56px;" src=" assets/images/logo.png">
 								<span style="color: #ffff; font-weight: bold;vertical-align: middle;"> Slotify</span>
 							</a>							
 						</div>	
-
-						<!--Navbar Items-->				
+						<div class="innerNavItems" >
+										
 						<li class="nav-item">
 							<a class ="nav-link nav-text active" href="#slides"><i class="material-icons" style="font-size:24px; padding-right: 4px;">home</i>
-							<div class="navText">
+							<div class="innerNavText">
 								Start
 							</div>	
 						</a>
 						</li>
 						<li class="nav-item">
-							<a class ="nav-link nav-text  gray-border-bottom pl-3 pr-3" href="#about"><i class="material-icons" style="font-size:24px; padding-right: 4px;">search</i>Search
+							<a class ="nav-link nav-text   gray-border-bottom pl-3 pr-3" href="#about"><i class="material-icons" style="font-size:24px; padding-right: 4px;">search</i>
+								<div class="innerNavText">
+									Search	
+								</div>	
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class ="nav-link nav-text gray-border-bottom pl-3 pr-3" href="#skills"><i class="material-icons" style="font-size:24px; padding-right: 4px;">bar_chart</i>Library				
+							<a class ="nav-link nav-text gray-border-bottom pl-3 pr-3" href="#skills"><i class="material-icons" style="font-size:24px; padding-right: 4px;">bar_chart</i>
+
+								<div class="innerNavText">
+									Library	
+								</div>				
 							</a>
 						</li>
+						</div>
+
+						
 					
 						<!-- Navbar Left Items-->	
 					<ul class="nav flex-column ">	
@@ -65,9 +76,14 @@
 
 			<!--Main Page-->
 			<div id="mainContainer" class="container-fluid">
-
-					<h2>ICH BIN VILROSE::::::</h2>
-					<SPAN>ICH BIN CUTE <3</SPAN>
+				<div class="topContainer">
+					<div class="row">
+						<div class="col-12">
+							
+						</div>
+						
+					</div>
+				</div>
 			</div>
 
 			<!--Footer -- Now Playing Bar --if signed in-->
