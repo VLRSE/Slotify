@@ -96,16 +96,12 @@ function getInputValue($name){
 					</div>	
 					<div id="loginButtonLink" class=" buttonLink justify-content-center ">
 						<div class="">
-								<a  href="signup.php" role ="button"  ><button class="btn btn-outline-secondary rounded-pill btn-lg btn-block">REGISTER</button></a>
+							<a  href="signup.php" role ="button"  ><button class="btn btn-outline-secondary rounded-pill btn-lg btn-block">REGISTER</button></a>
 						</div>
-					
-					</div>				
-				
-				
-			</div>			
+					</div>		
 			</div>
+			
 		</div>
-
 	</div>
 
 	<!--Bootstrap-->

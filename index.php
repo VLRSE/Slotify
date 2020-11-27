@@ -21,14 +21,12 @@
 <body data-spy = scroll data-target = ".navbar">
 
 	<div id ="main" >
-		<div class="grid-container border">		
+		<div class="grid-container ">		
 			<!--Navbar-->
 			<div class="navbar">
-
-					<!-- Navbar Left Items-->	
-					<ul class="nav flex-column border">	
-
-						<div class="container logo " href="#">
+				<div class="container">
+					<nav class="navbarItems">
+						<div class=" logo " href="#">
 							<!--Logo on the left-side-->
 							<a href="includes/index.php" style="font-size: 36px; padding: 5px;">
 								<img style="height: 506x;width: 56px;" src=" assets/images/logo.png">
@@ -38,7 +36,10 @@
 
 						<!--Navbar Items-->				
 						<li class="nav-item">
-							<a class ="nav-link nav-text active" href="#slides"><i class="material-icons" style="font-size:24px; padding-right: 4px;">home</i>Start
+							<a class ="nav-link nav-text active" href="#slides"><i class="material-icons" style="font-size:24px; padding-right: 4px;">home</i>
+							<div class="navText">
+								Start
+							</div>	
 						</a>
 						</li>
 						<li class="nav-item">
@@ -49,7 +50,16 @@
 							<a class ="nav-link nav-text gray-border-bottom pl-3 pr-3" href="#skills"><i class="material-icons" style="font-size:24px; padding-right: 4px;">bar_chart</i>Library				
 							</a>
 						</li>
-					</ul>	
+					
+						<!-- Navbar Left Items-->	
+					<ul class="nav flex-column ">	
+					</ul>
+
+					</nav>
+				</div>
+				
+
+					
 					
 			</div>
 

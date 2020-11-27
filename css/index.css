@@ -65,17 +65,27 @@ body, html{
 	z-index: 3;
 }
 
-.nav-text{	
-	color:  white;
+
+#main .nav-text{	
+	align-items: inherit;
+	 display: flex;
+	 color:  white;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 14px;
 	font-weight: bold;
 	letter-spacing: 1px;
 	opacity: 0.7;
+	-ms-flex-direction:column;
+
 }
-#main .nav-text{	
-	align-items: inherit;
+.nav-link{
+	display: flex;
+	flex-direction: row;
 }
+ .navbar .nav-link {
+
+ } 
+
 ul{
 	list-style: none;
 	text-decoration-style: none;
@@ -182,7 +192,6 @@ li a:hover {
 
 .playbackBar .progressTime,
 .playbackBar .progressBar{
-
 	color: #a0a0a0;
 	font-size: 11px;
 	min-width: 40px;
@@ -196,7 +205,8 @@ li a:hover {
 }
 
 .progressBarBg{
-	background-color: #383838;
+	background-color: #565656;
+    border-radius: 4px;
 }
 
 .progressBar .progress{
