@@ -9,7 +9,8 @@ This Repo consists of a Registration page, which requires users to enter desired
 
 
 
-This Repo consists of a Login page, which requires users to enter log in details provided at the time of registration. Procedural PHP functions will then verify the details entered against the MYSQL database entries. An error message will be displayed on the page for invalid  user information details entered.      
-/****To be Updated with OAuth  Google and Facebook Sign-in Integration.
+This Repo consists of a Login page, which requires users to enter log in details provided at the time of registration. Procedural PHP functions will then verify the details entered against the MYSQL database entries. An error message will be displayed on the page for invalid  user information details entered.    
+
+/****To be Updated with OAuth  Google and Facebook Sign-in Integration. ****/
 
 After a success login, the user will be redirected to the index page of the website. 
