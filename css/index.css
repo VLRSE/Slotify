@@ -89,7 +89,7 @@ body, html{
 	letter-spacing: 1px;
 	opacity: 0.7;
 	-ms-flex-direction:column;
-	    margin: auto;
+	margin: auto;
 }
 
 .nav-link{
@@ -146,11 +146,124 @@ li a:hover {
 /*Top Navbar*/
 #mainContainer .topNavbar{
 	padding: 0;
-	margin: 0;
+	margin: 2vh auto;
+	flex-direction: row;
 
 }
-.arrowButtons{
 
+#mainContainer .arrowButtons{
+	width: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+#mainContainer .arrowButtons img{
+	height: 32px;
+    width: 32px;
+    padding: 3px;
+    margin: 0;
+    background: #000000;
+    border-radius: 50%;
+}
+#mainContainer .musicAlbumPage .row{
+	margin: 0;
+	margin-bottom: 16px;
+}
+#mainContainer .musicAlbumPage .row .HeaderTitle{
+	color: #ffff;
+	opacity: 0.87;
+
+}
+
+.profileButton{
+
+}
+
+#mainContainer .card .card-body{
+	color: #ffff;
+	opacity: 0.95;
+
+}
+
+#mainContainer .card{	
+	overflow: hidden;
+	height: 18rem;
+	border-radius: 10px;
+	background: -webkit-radial-gradient(top left, rgba(44,67,151, 0.8), rgba(68, 147, 234, 1.0));
+	background: -moz-radial-gradient(top left, rgba(44,67,151, 0.8), rgba(68, 147, 234, 1.0));
+	background: radial-gradient(to bottom right, rgba(44,67,151, 0.8), rgba(68, 147, 234, 1.0));
+}
+#mainContainer .card.one{
+
+	background: -webkit-linear-gradient(top left, rgba(0,105,101, 0.8), rgba(0,200,217, 1.0));
+	background: -moz-linear-gradient(top left, rgba(0,105,101, 0.8), rgba(0,200,217, 1.0));
+	background: linear-gradient(to bottom right, rgba(0,105,101, 0.8), rgba(0,200,217, 1.0));
+
+}
+
+#mainContainer .card.two{
+	background: rgba(83,34,190, 1.0);
+	background: -webkit-linear-gradient(top left, rgba(83,34,190, 1.0), rgba(146, 41, 212, 1.0));
+	background: -moz-linear-gradient(top left, rgba(83,34,190, 1.0), rgba(146, 41, 212, 1.0));
+	background: linear-gradient(to bottom right, rgba(83,34,190, 1.0), rgba(146, 41, 212, 1.0));
+}
+#mainContainer .card.three{
+
+background: -webkit-linear-gradient(top left,  rgba(0,149,82, 0.8), rgba(30, 177, 115, 1.0));
+background: -moz-linear-gradient(top left,  rgba(0,149,82, 0.8), rgba(30, 177, 115, 1.0));
+background: linear-gradient(to bottom right, rgba(0,149,82, 0.8), rgba(30, 177, 115, 1.0));
+	
+}
+#mainContainer .card.four{
+	background: -webkit-linear-gradient(top left, rgba(96,127,28, 0.8), rgba(138, 165, 46, 1.0));
+	background: -moz-linear-gradient(top left, rgba(96,127,28, 0.8), rgba(138, 165, 46, 1.0));
+	background: linear-gradient(to bottom right, rgba(96,127,28, 0.8), rgba(138, 165, 46, 1.0));
+}
+
+#mainContainer .card.five{
+	background: -webkit-linear-gradient(top left, rgba(224,137,12, 0.8), rgba(232, 171, 78, 1.0));
+	background: -moz-linear-gradient(top left, rgba(224,137,12, 0.8), rgba(232, 171, 78, 1.0));
+	background: linear-gradient(to bottom right, rgba(224,137,12, 0.8), rgba(232, 171, 78, 1.0));
+}
+
+#mainContainer .card.six{
+	background: -webkit-linear-gradient(top left, rgba(38,50,56, 0.8), rgba(96,125,139, 1.0));
+	background: -moz-linear-gradient(top left, rgba(38,50,56, 0.8), rgba(96,125,139, 1.0));
+	background: linear-gradient(to bottom right, rgba(38,50,56, 0.8), rgba(96,125,139, 1.0));
+}
+
+#mainContainer .card-img-top{
+	
+	position: absolute;
+	bottom: 0;	
+	transform: rotate(25deg);
+}
+
+#mainContainer .bigger .card-img-top{
+	height: 10rem;
+	width: 10rem;	
+	right: -40px;
+}
+#mainContainer .smaller .card-img-top{
+	height: 8rem;
+	width: 8rem;
+	right: -15px;
+}
+
+#mainContainer .bigger h1.card-title {
+	font-weight: bold;
+	font-size: 3.5rem;
+}
+
+#mainContainer .card.smaller{
+	width: 180px;
+	height: 15rem;
+	border-radius: 20px;
+	margin: 12px;
+	
+}
+#mainContainer .smaller .card-title{
+	font-weight: bold;
 }
 
 #mainContainer .nav-item li a.active {
@@ -160,8 +273,12 @@ li a:hover {
 /*Footer-- Now Playing Bar Container*/
 #nowPlayingContainer{
 	grid-column: 1 / span 2;
-	background-color: #383838;
-	min-width: 768px;	
+    background-color: #383838;
+    min-width: 768px;
+    z-index: 4;
+    position: fixed;
+    bottom: 0;
+    border-top: 1px solid black;
 }
 /*Now Playing Bar*/
 #nowPlayingBar{
@@ -169,6 +286,7 @@ li a:hover {
 	padding: 16px;
 	box-sizing: border-box;
 	color: #ffff;
+	
 
 }
 

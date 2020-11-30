@@ -69,63 +69,64 @@
 
 					</nav>
 				</div>
-				
-
-					
-					
 			</div>
 
 			<!--Main Page-->
 			<div id="mainContainer" class="container-fluid">
 				<!--Top Navbar-->
-				<div class="topNavbar container-fluid ">
-					<!--Top Left Arrow Buttons-->
-					<div class=" container ">						<!--Back Button-->	
-						<button class="controlButton" >
-							<span> <img src="assets/images/icons/back.png" style="height: 32px; width: 32px;" >
-							</span>
+				<div class="topNavbar container-fluid d-flex ">
+					<!--Top Navbar Arrow Buttons-->
+					<div class="arrowButtons container ">		
+						<!--Back Button-->	
+						<button class="controlButton " >
+							<img src="assets/images/icons/back.png"  >
 						</button> 
-							
-						
 						<!--Forward Button-->
-													
+						<button class="controlButton arrowButtons" >
+							<img src="assets/images/icons/forward.png" >
+						</button> 
 					</div>
+
+					<!--Top Navbar Search Bar-->
+					<div class="searchBar container" >
+						<div class="input-group">
+							  <div class="input-group-prepend">
+							    <span class="input-group-text" id="basic-addon1">
+							    	<img src="assets/images/icons/search1.png" style="height: 20px; width: 20px;">
+							    </span>
+							  </div>
+							  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+						</div>
+					</div>
+					<!--Top Navbar Profile Button-->
+					<div class=" profileButton container" >
+						<div class="dropdown">
+						  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    
+						  </button>
+						  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						    <a class="dropdown-item" href="#">Account</a>
+						    <a class="dropdown-item" href="#">Profile</a>
+						    <a class="dropdown-item" href="#">Logout here</a>
+						  </div>
+						</div>
+					</div>
+
 				</div>
+
 				<!--Music List Page-->
-				<div class="topContainer">
-					<div class="row">
-						<div class="col-12 col-sm-3">
-							
-						</div>
-						
-					</div>
+				<div id="mainView" class="musicAlbumPage ">
+					<?php include("includes/searchPage.php");
+					?>
 
-					<div class="row">
-						<div class="col-12 col-sm-3">
-							
-						</div>
-						
-					</div>
-					<div class="row">
-						<div class="col-12 col-sm-3">
-							
-						</div>
-						
-					</div>
-					<div class="row">
-						<div class="col-12 col-sm-3">
-							
-						</div>
-						
-					</div>
-
-				</div>
+				</div>	
 			</div>
+		
 
 			<!--Footer -- Now Playing Bar --if signed in-->
 			<div id="nowPlayingContainer" class="container-fluid">
 				<!-- Now Playing Bar Elements-->
-				<div id="nowPlayingBar">
+				<footer id="nowPlayingBar">
 					<!-- Now Playing Bar Left-->
 					<div id="nowPlayingBarLeft" class="">
 						<div class="content ">
@@ -195,9 +196,6 @@
 								<span class="progressTime remaining">0:00</span>
 								
 							</div>
-
-							
-							
 						</div>
 					</div>
 
@@ -220,12 +218,14 @@
 						</div>
 					</div>
 					
-				</div>
+				</footer>
 
 			</div>
-		</div>
 
+		</div>	
 	</div>
+
+</div>
 	
 
 
