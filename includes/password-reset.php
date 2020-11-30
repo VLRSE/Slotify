@@ -57,13 +57,7 @@
 						
 					</div>
 					
-				<!--Captcha-->
-					<div id="recaptcha-container" class="row justify-content-center pt-2">
-						 <form action="?" method="POST">
-						      <div class="g-recaptcha" data-sitekey="6Lfb0-gZAAAAAEMU6w0J7Zd2MiGrBbJEMcziNczL"></div>
-						      <br/>
-						      <input type="submit" value="Submit">
-					    </form>
+				
 						
 					<!--Reset Button-->
 					<div id= "resetButton"class="col-md-12 justify-content-center pt-2">

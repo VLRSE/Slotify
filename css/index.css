@@ -21,6 +21,7 @@ body, html{
 
 /*Page grid container*/
 .grid-container{
+	background-color: #121212;
 	width: 100%;
 	position: relative;
 	height: 100%;
@@ -66,6 +67,8 @@ body, html{
 	padding:0;
 	z-index: 3;
 	align-items: baseline;
+	height: 100vh;
+    position: fixed;  
 }
  .container.navBarTopContainer{
  	padding-top: 36px;
@@ -141,20 +144,24 @@ li a:hover {
 /*Main Page on the right side*/
 #mainContainer{
 	grid-area: mainContent;
-	background-color: #212121;
+	background-color: #121212;
+	margin: 0;
+	padding: 0;
+	position:relative;
+	transform:translateX(250px);
 }
 /*Top Navbar*/
 #mainContainer .topNavbar{
 	padding: 0;
 	margin: 2vh auto;
 	flex-direction: row;
-
 }
 
 #mainContainer .arrowButtons{
 	width: auto;
     display: flex;
     flex-direction: row;
+    width: 15%;
 }
 
 #mainContainer .arrowButtons img{
@@ -165,17 +172,32 @@ li a:hover {
     background: #000000;
     border-radius: 50%;
 }
-#mainContainer .musicAlbumPage .row{
+#mainContainer .musicAlbumPage{
 	margin: 0;
 	margin-bottom: 16px;
+	margin-right: 8px;
+
 }
-#mainContainer .musicAlbumPage .row .HeaderTitle{
+
+#mainContainer .HeaderTitle h2{
 	color: #ffff;
 	opacity: 0.87;
+	text-align: left;
 
 }
+/*Top Navbar Profile Button*/
+#mainContainer .dropdown button{
+    background-color: black;
+    border-radius: 20px;
+    padding: 0;
+   	border:none;
+   	width: 150px;
+}
 
-.profileButton{
+#mainContainer .profileButton img{
+	border-radius: 50%;
+    height: 40px;
+    width: 40px;
 
 }
 
@@ -185,7 +207,7 @@ li a:hover {
 
 }
 
-#mainContainer .card{	
+#searchPage  .card{	
 	overflow: hidden;
 	height: 18rem;
 	border-radius: 10px;
@@ -193,7 +215,7 @@ li a:hover {
 	background: -moz-radial-gradient(top left, rgba(44,67,151, 0.8), rgba(68, 147, 234, 1.0));
 	background: radial-gradient(to bottom right, rgba(44,67,151, 0.8), rgba(68, 147, 234, 1.0));
 }
-#mainContainer .card.one{
+#searchPage .card.one{
 
 	background: -webkit-linear-gradient(top left, rgba(0,105,101, 0.8), rgba(0,200,217, 1.0));
 	background: -moz-linear-gradient(top left, rgba(0,105,101, 0.8), rgba(0,200,217, 1.0));
@@ -201,75 +223,128 @@ li a:hover {
 
 }
 
-#mainContainer .card.two{
+#searchPage .card.two{
 	background: rgba(83,34,190, 1.0);
 	background: -webkit-linear-gradient(top left, rgba(83,34,190, 1.0), rgba(146, 41, 212, 1.0));
 	background: -moz-linear-gradient(top left, rgba(83,34,190, 1.0), rgba(146, 41, 212, 1.0));
 	background: linear-gradient(to bottom right, rgba(83,34,190, 1.0), rgba(146, 41, 212, 1.0));
 }
-#mainContainer .card.three{
+#searchPage .card.three{
 
 background: -webkit-linear-gradient(top left,  rgba(0,149,82, 0.8), rgba(30, 177, 115, 1.0));
 background: -moz-linear-gradient(top left,  rgba(0,149,82, 0.8), rgba(30, 177, 115, 1.0));
 background: linear-gradient(to bottom right, rgba(0,149,82, 0.8), rgba(30, 177, 115, 1.0));
 	
 }
-#mainContainer .card.four{
+#searchPage .card.four{
 	background: -webkit-linear-gradient(top left, rgba(96,127,28, 0.8), rgba(138, 165, 46, 1.0));
 	background: -moz-linear-gradient(top left, rgba(96,127,28, 0.8), rgba(138, 165, 46, 1.0));
 	background: linear-gradient(to bottom right, rgba(96,127,28, 0.8), rgba(138, 165, 46, 1.0));
 }
 
-#mainContainer .card.five{
+#searchPage .card.five{
 	background: -webkit-linear-gradient(top left, rgba(224,137,12, 0.8), rgba(232, 171, 78, 1.0));
 	background: -moz-linear-gradient(top left, rgba(224,137,12, 0.8), rgba(232, 171, 78, 1.0));
 	background: linear-gradient(to bottom right, rgba(224,137,12, 0.8), rgba(232, 171, 78, 1.0));
 }
 
-#mainContainer .card.six{
+#searchPage .card.six{
 	background: -webkit-linear-gradient(top left, rgba(38,50,56, 0.8), rgba(96,125,139, 1.0));
 	background: -moz-linear-gradient(top left, rgba(38,50,56, 0.8), rgba(96,125,139, 1.0));
 	background: linear-gradient(to bottom right, rgba(38,50,56, 0.8), rgba(96,125,139, 1.0));
 }
 
-#mainContainer .card-img-top{
+#searchPage .card-img-top{
 	
 	position: absolute;
 	bottom: 0;	
 	transform: rotate(25deg);
 }
 
-#mainContainer .bigger .card-img-top{
+#searchPage .bigger .card-img-top{
 	height: 10rem;
 	width: 10rem;	
 	right: -40px;
 }
-#mainContainer .smaller .card-img-top{
+#searchPage .smaller .card-img-top{
 	height: 8rem;
 	width: 8rem;
 	right: -15px;
 }
 
-#mainContainer .bigger h1.card-title {
+#searchPage .bigger h1.card-title {
 	font-weight: bold;
 	font-size: 3.5rem;
 }
 
-#mainContainer .card.smaller{
+#searchPage .card.smaller{
 	width: 180px;
 	height: 15rem;
 	border-radius: 20px;
 	margin: 12px;
 	
 }
-#mainContainer .smaller .card-title{
+#searchPage .smaller .card-title{
 	font-weight: bold;
 }
 
-#mainContainer .nav-item li a.active {
+#searchPage .nav-item li a.active {
 	
 	opacity: 1;
 }
+/*Search Page*/
+#startPage{
+	 padding-right: 8px;
+}
+
+#startPage .grid{		
+	display: flex;
+	flex-direction: column;
+	grid-gap: 32px;
+
+}
+#startPage section{
+	display: flex;
+	padding: 0 24px;
+	color: #ffff;
+    flex-direction: column;
+    grid-gap: 24px;
+}
+
+#startPage .cardItems{
+	display: grid;	
+	grid-gap: 24px;
+	grid-template-columns: repeat(auto-fill, minmax(180px, auto));
+}
+
+#startPage .card{
+	background-color: #212121;	
+	padding: 16px;
+	height: initial;
+}
+
+#startPage .card-body {
+
+	opacity: 0.87;
+	text-align: left;
+	padding: 16px 0 0 0;
+	margin: 0;
+}
+
+#startPage .card .card-img-top{
+	height: 9rem;
+
+}
+
+#startPage .card-body .card-text{
+	opacity: 0.80;
+	overflow-y: hidden;
+	font-weight: 400;
+	max-height: 5rem;
+	line-height: 1.3;
+}
+
+
 /*Footer-- Now Playing Bar Container*/
 #nowPlayingContainer{
 	grid-column: 1 / span 2;

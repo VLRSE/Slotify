@@ -74,7 +74,7 @@ function getInputValue($name){
 				<div class="row reset-password pt-2">
 					<div class="col-md-12">
 						<p>
-							<u><a id = "reset-password-link" href="password-reset.php">Forgot password?</a></u>
+							<u><a id = "reset-password-link" href="includes/password-reset.php">Forgot password?</a></u>
 						</p>						
 					</div>					
 				</div>

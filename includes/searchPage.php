@@ -44,10 +44,10 @@
 
 		<!--Card Item-->
 		<div class="col-3 col-sm-3 col-md-3 col-lg-3 d-flex ">
-			<div class="card two bigger" style="width: 28rem; min-width: 28rem;">
+			<div class="card three bigger" style="width: 28rem; min-width: 28rem;">
 			 
 			  <div class="card-body">
-			     <h1 class="card-title">Hiphop</h1>
+			     <h1 class="card-title">R&B</h1>
 			  </div>
 			   <img class="card-img-top" src="assets/images/album-images/album1.jpg" alt="Card image cap">
 			</div>

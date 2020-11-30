@@ -24,27 +24,26 @@
 		<div class="grid-container ">		
 			<!--Navbar-->
 			<div class="navbar">
-				<div class="navBarTopContainer container">
-					<!--Navbar Items-->	
+				<!--Navbar Items-->	
 					<nav class="navbarItems">
 						<div class=" logo " href="#">
 							<!--Logo on the left-side-->
 							<a href="index.php" style="font-size: 36px; padding: 5px;">
-								<img style="height: 506x;width: 56px;" src=" assets/images/logo.png">
+								<img style="height: 56px;width: 56px;" src=" assets/images/logo.png">
 								<span style="color: #ffff; font-weight: bold;vertical-align: middle;"> Slotify</span>
 							</a>							
 						</div>	
 						<div class="innerNavItems" >
 										
 						<li class="nav-item">
-							<a class ="nav-link nav-text active" href="#slides"><img src="assets/images/icons/home-white.png" style="height: 24px; width: 24px;"> 
+							<a class ="nav-link nav-text active" href="includes/startPage.php"><img src="assets/images/icons/home-white.png" style="height: 24px; width: 24px;"> 
 							<div class="innerNavText">
 								Start
 							</div>	
 						</a>
 						</li>
 						<li class="nav-item">
-							<a class ="nav-link nav-text   gray-border-bottom pl-3 pr-3" href="#about"><i class="material-icons" style="font-size:24px; padding-right: 4px;">search</i>
+							<a class ="nav-link nav-text   gray-border-bottom pl-3 pr-3" href="includes/searchPage.php"><i class="material-icons" style="font-size:24px; padding-right: 4px;">search</i>
 								<div class="innerNavText">
 									Search	
 								</div>	
@@ -68,158 +67,30 @@
 					</ul>
 
 					</nav>
-				</div>
 			</div>
 
 			<!--Main Page-->
 			<div id="mainContainer" class="container-fluid">
-				<!--Top Navbar-->
-				<div class="topNavbar container-fluid d-flex ">
-					<!--Top Navbar Arrow Buttons-->
-					<div class="arrowButtons container ">		
-						<!--Back Button-->	
-						<button class="controlButton " >
-							<img src="assets/images/icons/back.png"  >
-						</button> 
-						<!--Forward Button-->
-						<button class="controlButton arrowButtons" >
-							<img src="assets/images/icons/forward.png" >
-						</button> 
-					</div>
-
-					<!--Top Navbar Search Bar-->
-					<div class="searchBar container" >
-						<div class="input-group">
-							  <div class="input-group-prepend">
-							    <span class="input-group-text" id="basic-addon1">
-							    	<img src="assets/images/icons/search1.png" style="height: 20px; width: 20px;">
-							    </span>
-							  </div>
-							  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-						</div>
-					</div>
-					<!--Top Navbar Profile Button-->
-					<div class=" profileButton container" >
-						<div class="dropdown">
-						  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						    
-						  </button>
-						  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						    <a class="dropdown-item" href="#">Account</a>
-						    <a class="dropdown-item" href="#">Profile</a>
-						    <a class="dropdown-item" href="#">Logout here</a>
-						  </div>
-						</div>
-					</div>
-
-				</div>
+				
 
 				<!--Music List Page-->
-				<div id="mainView" class="musicAlbumPage ">
-					<?php include("includes/searchPage.php");
-					?>
+				<div id="mainView" class="musicAlbumPage  ">
+					<!--Top Navbar-->
+				<div class="topNavbar container-fluid d-flex ">
+					<?php include("includes/topNavbar.php");?>
+				</div>
+					<div id="mainContent">
+						<?php include("includes/startPage.php");?>
+					</div>
+					
 
 				</div>	
 			</div>
-		
 
 			<!--Footer -- Now Playing Bar --if signed in-->
 			<div id="nowPlayingContainer" class="container-fluid">
 				<!-- Now Playing Bar Elements-->
-				<footer id="nowPlayingBar">
-					<!-- Now Playing Bar Left-->
-					<div id="nowPlayingBarLeft" class="">
-						<div class="content ">
-							<span class="albumLink " >
-								<img class="albumImage" src="https://images.unsplash.com/photo-1512608121467-72931bf816c0?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fGFsYnVtJTIwYXJ0fGVufDB8fDB8&auto=format&fit=crop&w=500&q=60" >
-								<div class="d-flex">
-									<div class="trackInfo ">
-										<span class="trackName"> Like That</span>
-										<span class="trackArtist">Bea Miller</span>
-									</div>
-									<div class="saveToLibraryBtn">
-										<button class="controlButton" title="Save to Favorite" >
-										<img src="assets/images/icons/heart-50.png"> 
-										</button>
-									</div>
-								</div>
-							</span>
-						</div>
-					</div>
-
-					<!-- Now Playing Bar Center-->
-					<div id="nowPlayingBarCenter" >
-						<div class="content  playerControls">
-							<!-- Player Buttons-->
-							<div class="buttons">
-								<!-- Suffle Button-->
-								<button class="controlButton shuffle" title="Shuffle">
-									<img src="assets/images/icons/shuffle.png" alt="Shuffle Button">
-								</button>
-
-								<!-- Previous Button-->
-								<button class="controlButton " title="Previous">
-									<img src="assets/images/icons/previous.png" alt="Previous Button">
-								</button>
-
-								<!-- Play Button-->
-								<button class="controlButton centerButton" title="Play">
-									<img src="assets/images/icons/play.png" alt="Play Button">
-								</button>
-
-								<!-- Pause Button-->
-								<button class="controlButton centerButton" title="Pause" style="display: none">
-									<img src="assets/images/icons/pause.png" alt="Pause Button">
-								</button>
-
-								<!-- Next Button-->
-								<button class="controlButton " title="Next">
-									<img src="assets/images/icons/next.png" alt="Next Button">
-								</button>
-
-								<!-- Repeat Button-->
-								<button class="controlButton " title="Repeat">
-									<img src="assets/images/icons/repeat.png" alt="Repeat Button">
-								</button>
-							</div>
-
-							<!-- Progress Bar Container-->
-							<div  class=" playbackBar" >
-								<span class="progressTime current">0:00</span>
-								<div class="progressBar ">
-									<div class="progressBarBg">
-										<div class="progress">
-											
-										</div>
-									</div>
-								</div>
-								<span class="progressTime remaining">0:00</span>
-								
-							</div>
-						</div>
-					</div>
-
-					<!-- Now Playing Bar Right-->
-					<div id="nowPlayingBarRight" class="">
-						<div class="content">
-							<div class="volumeBar d-flex">
-								<button class="controlButton" title="Volume">
-									<img src="assets/images/icons/volume.png" alt="Volume Button">	
-								</button>
-									<div class="progressBar ">
-									<div class="progressBarBg">
-										<div class="progress">					
-										</div>
-									</div>
-								</div>
-								
-							</div>
-							
-						</div>
-					</div>
-					
-				</footer>
-
+				<?php include("includes/footer.php");?>
 			</div>
 
 		</div>	
