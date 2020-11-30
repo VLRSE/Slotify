@@ -5,7 +5,7 @@
 		<img src="assets/images/icons/back.png"  >
 	</button> 
 	<!--Forward Button-->
-	<button class="controlButton arrowButtons" >
+	<button class="controlButton" >
 		<img src="assets/images/icons/forward.png" >
 	</button> 
 </div>
@@ -27,7 +27,8 @@
 	<div class="dropdown">
 	  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	  	<!--Top Navbar User Profile Image-->
-	  	<img src="assets/images/bg-1.jpg">	    
+	  	<img src="assets/images/bg-1.jpg">	  
+	  	<p>Vilrose</p>  
 	  </button>
 	  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 	    <a class="dropdown-item" href="#">Account</a>

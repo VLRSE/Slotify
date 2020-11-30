@@ -191,16 +191,26 @@ li a:hover {
     border-radius: 20px;
     padding: 0;
    	border:none;
-   	width: 150px;
+   	width: 90px;
+   	display: flex;
+   	flex-direction: row;
+
 }
 
 #mainContainer .profileButton img{
 	border-radius: 50%;
     height: 40px;
     width: 40px;
-
+    margin-right: 15px;
+    margin-top: 4px;
 }
 
+.dropdown-toggle::after,
+#mainContainer .profileButton img,
+#mainContainer .profileButton p {
+   
+    margin: auto;
+}
 #mainContainer .card .card-body{
 	color: #ffff;
 	opacity: 0.95;
